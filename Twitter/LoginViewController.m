@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.5058 green:0.7725 blue:0.9176 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.42569828033447266 green:0.74675935506820679 blue:0.90954983234405518 alpha:1.0];
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -42,6 +42,15 @@
     [[TwitterClient sharedInstance] loginWIthCompletion:^(User *user, NSError * error) {
         if(user!= nil) {
             //Modally present tweets view
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            [defaults setObject:user.screenName forKey:@"screenName"];
+            [defaults setObject:user.profileImageUrl forKey:@"profileImageUrl"];
+            
+            [defaults synchronize];
+            
+            
+            
             NSLog(@"Welcome to %@", user.name);
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             HamburgerViewController *hamburgerViewController = (HamburgerViewController *)[storyboard instantiateViewControllerWithIdentifier:@"HamburgerViewController"];

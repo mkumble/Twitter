@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic)   UIViewController *tweetsViewController;
-@property (strong, nonatomic)   UIViewController *blueViewController;
+@property (strong, nonatomic)   UIViewController *composeTweetViewController;
 @property (strong, nonatomic)   UIViewController *redViewController;
 
 @end
@@ -27,7 +27,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"  bundle:nil];
     self.tweetsViewController = [storyboard instantiateViewControllerWithIdentifier:@"TweetsViewController"];
-    self.blueViewController = [storyboard instantiateViewControllerWithIdentifier:@"BlueViewController"];
+    self.composeTweetViewController = [storyboard instantiateViewControllerWithIdentifier:@"ComposeTweetViewController"];
     self.redViewController = [storyboard instantiateViewControllerWithIdentifier:@"RedViewController"];
     
     // Do any additional setup after loading the view.
@@ -58,13 +58,14 @@
     MenuCell * cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
     
     if(indexPath.row == 0) {
-        cell.menuItemLabel.text = @"Tweets";
-        
+        cell.menuImage.image =  [UIImage imageNamed:@"home"];
+
     }
     else if(indexPath.row == 1) {
-        cell.menuItemLabel.text = @"Compose";
+   cell.menuImage.image =  [UIImage imageNamed:@"compose"];
         
     }
+
     return cell;
 }
 
@@ -76,11 +77,7 @@
         
     }
     else if(indexPath.row == 1) {
-        [self.hamburgerViewController setContentViewController:self.blueViewController];
-        
-    }
-    else if(indexPath.row == 2) {
-        [self.hamburgerViewController setContentViewController:self.redViewController];
+        [self.hamburgerViewController setContentViewController:self.composeTweetViewController];
         
     }
 }

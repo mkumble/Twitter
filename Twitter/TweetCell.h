@@ -10,5 +10,7 @@
 
 @interface TweetCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *tweetMessage;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageUrl;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
 
 @end

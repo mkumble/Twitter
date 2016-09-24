@@ -33,7 +33,8 @@
     
     [self.menuView addSubview:self.menuViewController.view];
     
-    
+        self.tweetsViewController = [storyboard instantiateViewControllerWithIdentifier:@"TweetsViewController"];
+    [self setContentViewController:self.tweetsViewController];
     
     // Do any additional setup after loading the view.
 }
@@ -58,10 +59,11 @@
     contentViewController.view.frame = self.contentView.bounds;
     [self.contentView addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
+    [self closeMenu];
 }
 
 - (void) openMenu {
-    [UIView animateWithDuration:1.5 animations:^{ self.leftMarginConstraint.constant = 150;}];
+    [UIView animateWithDuration:1.5 animations:^{ self.leftMarginConstraint.constant = 60;}];
     [self.view layoutIfNeeded];
     
    

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C171A001D960901008FC70C /* ComposeTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1719FF1D960901008FC70C /* ComposeTweetViewController.m */; };
 		1C2FE4481D91B81A005F4460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FE4471D91B81A005F4460 /* main.m */; };
 		1C2FE44B1D91B81A005F4460 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FE44A1D91B81A005F4460 /* AppDelegate.m */; };
 		1C2FE4531D91B81A005F4460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FE4521D91B81A005F4460 /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		19E601D0E68AF30E3EA0E8CF /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		1A67A42C93110033083D5D3E /* libPods-Twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1719FE1D960901008FC70C /* ComposeTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeTweetViewController.h; sourceTree = "<group>"; };
+		1C1719FF1D960901008FC70C /* ComposeTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeTweetViewController.m; sourceTree = "<group>"; };
 		1C2FE4431D91B81A005F4460 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FE4471D91B81A005F4460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C2FE4491D91B81A005F4460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +74,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C171A011D960931008FC70C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C526A861D94FB0000EF106D /* TweetCell.h */,
+				1C526A831D94F4A600EF106D /* MenuCell.h */,
+				1C526A871D94FB0000EF106D /* TweetCell.m */,
+				1C526A841D94F4A600EF106D /* MenuCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1C171A021D960943008FC70C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C51121D1D91BBDF0036B79F /* LoginViewController.h */,
+				1C51121E1D91BBDF0036B79F /* LoginViewController.m */,
+				1C1719FE1D960901008FC70C /* ComposeTweetViewController.h */,
+				1C1719FF1D960901008FC70C /* ComposeTweetViewController.m */,
+				1C5112571D94B2AE0036B79F /* MenuViewController.h */,
+				1C5112581D94B2AE0036B79F /* MenuViewController.m */,
+				1C51125A1D94B2B70036B79F /* TweetsViewController.h */,
+				1C51125B1D94B2B70036B79F /* TweetsViewController.m */,
+				1C5112541D94B07A0036B79F /* HamburgerViewController.h */,
+				1C5112551D94B07A0036B79F /* HamburgerViewController.m */,
+				1C5112511D94A2B30036B79F /* TabBarController.h */,
+				1C5112521D94A2B30036B79F /* TabBarController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		1C2FE43A1D91B81A005F4460 = {
 			isa = PBXGroup;
 			children = (
@@ -92,26 +125,14 @@
 		1C2FE4451D91B81A005F4460 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				1C171A021D960943008FC70C /* View Controllers */,
+				1C171A011D960931008FC70C /* Views */,
 				1C5112251D91E17E0036B79F /* Models */,
 				1C2FE4491D91B81A005F4460 /* AppDelegate.h */,
 				1C2FE44A1D91B81A005F4460 /* AppDelegate.m */,
 				1C5112221D91BD080036B79F /* TwitterClient.h */,
 				1C5112231D91BD080036B79F /* TwitterClient.m */,
-				1C51121D1D91BBDF0036B79F /* LoginViewController.h */,
-				1C51121E1D91BBDF0036B79F /* LoginViewController.m */,
 				1C51124F1D9490120036B79F /* Main.storyboard */,
-				1C526A861D94FB0000EF106D /* TweetCell.h */,
-				1C526A871D94FB0000EF106D /* TweetCell.m */,
-				1C526A831D94F4A600EF106D /* MenuCell.h */,
-				1C526A841D94F4A600EF106D /* MenuCell.m */,
-				1C5112571D94B2AE0036B79F /* MenuViewController.h */,
-				1C5112581D94B2AE0036B79F /* MenuViewController.m */,
-				1C51125A1D94B2B70036B79F /* TweetsViewController.h */,
-				1C51125B1D94B2B70036B79F /* TweetsViewController.m */,
-				1C5112541D94B07A0036B79F /* HamburgerViewController.h */,
-				1C5112551D94B07A0036B79F /* HamburgerViewController.m */,
-				1C5112511D94A2B30036B79F /* TabBarController.h */,
-				1C5112521D94A2B30036B79F /* TabBarController.m */,
 				1C2FE4521D91B81A005F4460 /* Assets.xcassets */,
 				1C2FE4541D91B81A005F4460 /* LaunchScreen.storyboard */,
 				1C2FE4571D91B81A005F4460 /* Info.plist */,
@@ -286,6 +307,7 @@
 				1C526A851D94F4A700EF106D /* MenuCell.m in Sources */,
 				1C2FE44B1D91B81A005F4460 /* AppDelegate.m in Sources */,
 				1C51122B1D91E1D00036B79F /* User.m in Sources */,
+				1C171A001D960901008FC70C /* ComposeTweetViewController.m in Sources */,
 				1C51125C1D94B2B70036B79F /* TweetsViewController.m in Sources */,
 				1C5112281D91E1C30036B79F /* Tweet.m in Sources */,
 				1C2FE4481D91B81A005F4460 /* main.m in Sources */,

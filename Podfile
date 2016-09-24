@@ -4,7 +4,8 @@
 target 'Twitter' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-pod "BDBOAuth1Manager"
+pod 'BDBOAuth1Manager'
+pod 'AFNetworking'
   # Pods for Twitter
 
 end
